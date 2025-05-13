@@ -70,7 +70,6 @@ elif st.session_state.step == 3:
     elif jenis == "Gas":
         st.session_state.form_data["konsentrasi_gas"] = st.number_input("Konsentrasi Gas Buang")
         st.session_state.form_data["parameter_gas"] = st.text_input("Parameter")
-        st.session_state.form_data["opasitas"] = st.number_input("Opasitas (%)")
 
     st.button("Kembali", on_click=prev_step)
     if st.button("Simpan dan Tampilkan Data"):
