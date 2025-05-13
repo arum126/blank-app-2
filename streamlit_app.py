@@ -89,7 +89,7 @@ import streamlit as st
 st.markdown("""
     <style>
     body {
-        background-color:#1b5e20;
+        background-color: white;
     }
 
     /* Header Streamlit */
@@ -112,5 +112,6 @@ st.markdown("""
 
 st.title("Sistem Pelaporan Limbah Industri")
 st.write("Latar belakang berwarna putih dengan nuansa hijau lingkungan 🌱")
+
 
 
