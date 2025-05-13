@@ -35,6 +35,34 @@ elif st.session_state.step == 2:
         st.session_state.form_data["kapasitas_ipal"] = st.number_input("Kapasitas IPAL (m³/hari)")
         st.session_state.form_data["debit_limbah"] = st.number_input("Debit Limbah yang Diolah (m³/detik)")
 
+    import streamlit as st
+from streamlit_lottie import st_lottie
+import requests
+
+# Fungsi ambil animasi dari URL
+def load_lottieurl(url):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+
+# Contoh animasi bertema air atau ekologi (bisa disesuaikan)
+lottie_url = "https://lottie.host/1f8bc9f1-3d85-41be-a3ff-123abc8e942e/T4VE9xA9Ix.json"  # Misal animasi alat sampling air
+lottie_json = load_lottieurl(lottie_url)
+
+st.title("Simulasi Animasi Sampling IPAL")
+
+st_lottie(
+    lottie_json,
+    speed=1,
+    reverse=False,
+    loop=True,
+    quality="high",
+    height=400,
+    width=600,
+    key="sampling"
+)
+
     elif jenis == "Padat":
         st.session_state.form_data["jenis_limbah_padat"] = st.selectbox("Jenis Limbah Padat", ["B3", "Non B3"])
         st.session_state.form_data["cara_pengolahan"] = st.text_input("Cara Pengolahan")
@@ -83,13 +111,4 @@ elif st.session_state.step == 4:
         st.session_state.step = 1
         st.session_state.form_data = {}
 
-import streamlit as st
 
-# CSS untuk background warna
-st.markdown("""
-    <style>
-    body {
-        background-color: #187bcd;
-    }
-    </style>
-""", unsafe_allow_html=True)
