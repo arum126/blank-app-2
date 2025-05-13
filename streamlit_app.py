@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 # Inisialisasi session state
 if "step" not in st.session_state:
