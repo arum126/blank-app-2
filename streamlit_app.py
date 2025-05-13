@@ -19,7 +19,7 @@ if st.session_state.step == 1:
     st.title("Pelaporan Limbah Industri - Halaman 1")
     
     st.session_state.form_data["tanggal"] = st.date_input("Tanggal Pelaporan")
-    st.session_state.form_data["jenis_limbah"] = st.selectbox("Jenis Limbah", ["Cair", "Padat", "Gas"])
+    st.session_state.form_data["jenis_limbah"] = st.selectbox("Jenis Limbah", ["Cair", "Padat", "Gas","kebisingan"])
     
     if st.button("Lanjut"):
         next_step()
@@ -30,17 +30,16 @@ elif st.session_state.step == 2:
     jenis = st.session_state.form_data.get("jenis_limbah")
 
     if jenis == "Cair":
-        st.session_state.form_data["teknologi_pengolahan"] = st.text_input("Jenis Teknologi Pengolahan")
+        st.session_state.form_data["teknologi_pengolahan"] = st.text_input("Jenis Pengolahan")
         st.session_state.form_data["proses_pengolahan"] = st.selectbox("Proses Pengolahan", ["Primer", "Sekunder", "Tersier"])
         st.session_state.form_data["kapasitas_ipal"] = st.number_input("Kapasitas IPAL (m³/hari)")
-        st.session_state.form_data["debit_limbah"] = st.number_input("Debit Limbah yang Diolah")
+        st.session_state.form_data["debit_limbah"] = st.number_input("Debit Limbah yang Diolah (m³/detik)")
 
     elif jenis == "Padat":
         st.session_state.form_data["jenis_limbah_padat"] = st.selectbox("Jenis Limbah Padat", ["B3", "Non B3"])
         st.session_state.form_data["cara_pengolahan"] = st.text_input("Cara Pengolahan")
-        st.session_state.form_data["volume_per_minggu"] = st.number_input("Volume Limbah (per minggu)")
+        st.session_state.form_data["volume_per_minggu"] = st.number_input("Volume Limbah /minggu (kg)")
         st.session_state.form_data["lokasi_penyimpanan"] = st.text_input("Lokasi Penyimpanan Sementara")
-        st.session_state.form_data["metode_penyimpanan"] = st.text_input("Metode Penyimpanan")
 
     elif jenis == "Gas":
         st.session_state.form_data["teknologi_pengendalian"] = st.text_input("Teknologi Pengendalian Emisi")
