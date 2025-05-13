@@ -34,7 +34,6 @@ elif st.session_state.step == 2:
         st.session_state.form_data["proses_pengolahan"] = st.selectbox("Proses Pengolahan", ["Primer", "Sekunder", "Tersier"])
         st.session_state.form_data["kapasitas_ipal"] = st.number_input("Kapasitas IPAL (m³/hari)")
         st.session_state.form_data["debit_limbah"] = st.number_input("Debit Limbah yang Diolah")
-        st.session_state.form_data["reagen"] = st.text_input("Reagen/Bahan Kimia yang Digunakan")
 
     elif jenis == "Padat":
         st.session_state.form_data["jenis_limbah_padat"] = st.selectbox("Jenis Limbah Padat", ["B3", "Non B3"])
