@@ -60,8 +60,7 @@ st_lottie(
     quality="high",
     height=400,
     width=600,
-    key="sampling"
-)
+    key="sampling")
 
     elif jenis == "Padat":
         st.session_state.form_data["jenis_limbah_padat"] = st.selectbox("Jenis Limbah Padat", ["B3", "Non B3"])
