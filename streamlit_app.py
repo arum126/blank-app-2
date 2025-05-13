@@ -19,7 +19,7 @@ if st.session_state.step == 1:
     st.title("Pelaporan Limbah Industri - Halaman 1")
     
     st.session_state.form_data["tanggal"] = st.date_input("Tanggal Pelaporan")
-    st.session_state.form_data["jenis_limbah"] = st.selectbox("Jenis Limbah", ["Cair", "Padat", "Gas","kebisingan"])
+    st.session_state.form_data["jenis_limbah"] = st.selectbox("Jenis Limbah", ["Cair", "Padat", "Gas"])
     
     if st.button("Lanjut"):
         next_step()
@@ -45,11 +45,6 @@ elif st.session_state.step == 2:
         st.session_state.form_data["teknologi_pengendalian"] = st.text_input("Teknologi Pengendalian Emisi")
         st.session_state.form_data["jenis_gas"] = st.text_input("Jenis Gas yang Ditangani")
 
-    elif jenis == "Kebisingan":
-        st.session_state.form_data["lokasi_kebisingan"] = st.text_input("lokasi kebisingan")
-        st.session_state.form_data["tingkat_kebisingan"] = st.selectbox("tingkat kebisingan", ["Rendah", "Sedang", "Tinggi"])
-        st.session_state.form_data["sumber_kebisingan"] = st.text_input("sumber kebisingan")
-
     st.button("Kembali", on_click=prev_step)
     st.button("Lanjut", on_click=next_step)
 
@@ -73,11 +68,6 @@ elif st.session_state.step == 3:
     elif jenis == "Gas":
         st.session_state.form_data["konsentrasi_gas"] = st.number_input("Konsentrasi Gas Buang")
         st.session_state.form_data["parameter_gas"] = st.text_input("Parameter")
-
-    elif jenis == "Kebisingan":
-        st.session_state.form_data["jam_aktif"] = st.number_input("jam aktif")
-        st.session_state.form_data["hasil_pengukuran_kebisingan"] = st.number_input("hal pengukuran (dB)")
-        st.session_state.form_data["solusi_kebisingan"] = st.text_area("solusi kebisingan")
 
     st.button("Kembali", on_click=prev_step)
     if st.button("Simpan dan Tampilkan Data"):
