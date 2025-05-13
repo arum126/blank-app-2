@@ -83,5 +83,34 @@ elif st.session_state.step == 4:
     if st.button("Mulai Ulang"):
         st.session_state.step = 1
         st.session_state.form_data = {}
+import streamlit as st
+
+# CSS background putih + header hijau
+st.markdown("""
+    <style>
+    body {
+        background-color: white;
+    }
+
+    /* Header Streamlit */
+    .css-18e3th9 {
+        background-color: #2e7d32 !important;  /* hijau tua */
+        color: white;
+    }
+
+    /* Panel sidebar (jika digunakan) */
+    .css-1d391kg {
+        background-color: #a5d6a7 !important;  /* hijau muda */
+    }
+
+    /* Konten utama dibungkus */
+    .stApp {
+        background: linear-gradient(to bottom, white, #e8f5e9);  /* gradasi putih ke hijau sangat muda */
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+st.title("Sistem Pelaporan Limbah Industri")
+st.write("Latar belakang berwarna putih dengan nuansa hijau lingkungan 🌱")
 
 
