@@ -89,7 +89,7 @@ import streamlit as st
 st.markdown("""
     <style>
     body {
-        background-color: #f0f2f6;
+        background-color: #187bcd;
     }
     </style>
 """, unsafe_allow_html=True)
