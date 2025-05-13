@@ -45,7 +45,7 @@ elif st.session_state.step == 2:
         st.session_state.form_data["teknologi_pengendalian"] = st.text_input("Teknologi Pengendalian Emisi")
         st.session_state.form_data["jenis_gas"] = st.text_input("Jenis Gas yang Ditangani")
 
-    else jenis == "Kebisingan":
+    elif jenis == "Kebisingan":
         st.session_state.form_data["lokasi_kebisingan"] = st.text_input("lokasi kebisingan")
         st.session_state.form_data["tingkat_kebisingan"] = st.selectbox("tingkat kebisingan", ["Rendah", "Sedang", "Tinggi"])
         st.session_state.form_data["sumber_kebisingan"] = st.text_input("sumber kebisingan")
@@ -74,7 +74,7 @@ elif st.session_state.step == 3:
         st.session_state.form_data["konsentrasi_gas"] = st.number_input("Konsentrasi Gas Buang")
         st.session_state.form_data["parameter_gas"] = st.text_input("Parameter")
 
-    else jenis == "Kebisingan":
+    elif jenis == "Kebisingan":
         st.session_state.form_data["jam_aktif"] = st.number_input("jam aktif")
         st.session_state.form_data["hasil_pengukuran_kebisingan"] = st.number_input("hal pengukuran (dB)")
         st.session_state.form_data["solusi_kebisingan"] = st.text_area("solusi kebisingan")
