@@ -83,14 +83,7 @@ elif st.session_state.step == 4:
     if st.button("Mulai Ulang"):
         st.session_state.step = 1
         st.session_state.form_data = {}
-st.markdown("""
-    <style>
-    .stApp {
-        background: linear-gradient(to bottom right, white, #c8e6c9);  /* putih ke hijau muda */
-        background-attachment: fixed;
-    }
-    </style>
-""", unsafe_allow_html=True)
+
 
 
 
