@@ -82,3 +82,14 @@ elif st.session_state.step == 4:
     if st.button("Mulai Ulang"):
         st.session_state.step = 1
         st.session_state.form_data = {}
+
+import streamlit as st
+
+# CSS untuk background warna
+st.markdown("""
+    <style>
+    body {
+        background-color: #f0f2f6;
+    }
+    </style>
+""", unsafe_allow_html=True)
