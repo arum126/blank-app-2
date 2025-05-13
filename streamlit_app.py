@@ -59,6 +59,7 @@ elif st.session_state.step == 3:
         st.session_state.form_data["suhu"] = st.number_input("Suhu (°C)")
         st.session_state.form_data["parameter_uji"] = st.text_area("Parameter Uji")
         st.session_state.form_data["cara_pengawetan"] = st.text_input("Cara Pengawetan")
+        st.session_state.form_data["lokasi_ipal"] = st.selectbox("lokasi ipal", ["inlet", "outlet"])
         st.session_state.form_data["expired"] = st.date_input("Tanggal Kadaluwarsa")
 
     elif jenis == "Padat":
