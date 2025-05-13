@@ -82,24 +82,3 @@ elif st.session_state.step == 4:
     if st.button("Mulai Ulang"):
         st.session_state.step = 1
         st.session_state.form_data = {}
-
-import base64
-
-def set_background(picture_file):
-    with open(picture_file, "rb") as image_file:
-        encoded_string = base64.b64encode(image_file.read()).decode()
-
-    st.markdown(
-        f"""
-        <style>
-        body {{
-            background-image: url("data:image/png;base64,{encoded_string}");
-            background-size: cover;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-
-# Panggil fungsi dengan nama file lokal Anda
-set_background("background.png")
