@@ -89,7 +89,7 @@ import streamlit as st
 st.markdown("""
     <style>
     body {
-        background-color: white;
+        background-color: dark green;
     }
 
     /* Header Streamlit */
